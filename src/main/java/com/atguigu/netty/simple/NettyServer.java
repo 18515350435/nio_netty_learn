@@ -28,8 +28,8 @@ public class NettyServer {
             ServerBootstrap bootstrap = new ServerBootstrap();
 
             //使用链式编程来进行设置
-            bootstrap.group(bossGroup, workerGroup) //设置两个线程组
-                    .channel(NioServerSocketChannel.class) //使用NioSocketChannel 作为服务器的通道实现
+            bootstrap.group(bossGroup, workerGroup) //设置父子两个线程组
+                    .channel(NioServerSocketChannel.class) //NioServerSocketChannel 作为服务器的通道实现
                     .option(ChannelOption.SO_BACKLOG, 128) // 设置线程队列得到连接个数
                     .childOption(ChannelOption.SO_KEEPALIVE, true) //设置保持活动连接状态
 //                    .handler(null) // 该 handler对应 bossGroup , childHandler 对应 workerGroup
