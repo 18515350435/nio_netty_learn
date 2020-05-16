@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> {
+public class ChildGroupChatServerHandler extends SimpleChannelInboundHandler<String> {
 
     //public static List<Channel> channels = new ArrayList<Channel>();
 

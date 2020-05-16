@@ -43,7 +43,7 @@ public class GroupChatServer {
                             //向pipeline加入编码器
                             pipeline.addLast("encoder", new StringEncoder());
                             //加入自己的业务处理handler
-                            pipeline.addLast(new GroupChatServerHandler());
+                            pipeline.addLast(new ChildGroupChatServerHandler());
 
                         }
                     });

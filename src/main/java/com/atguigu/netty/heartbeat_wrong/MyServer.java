@@ -1,4 +1,4 @@
-package com.atguigu.netty.heartbeat;
+package com.atguigu.netty.heartbeat_wrong;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package com.atguigu.netty.heartbeat;
+package com.atguigu.netty.heartbeat_wrong;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

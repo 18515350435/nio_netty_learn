@@ -35,6 +35,7 @@ public class NettyClient {
             //启动客户端去连接服务器端
             //关于 ChannelFuture 要分析，涉及到netty的异步模型
             ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 6668).sync();
+            channelFuture.channel().remoteAddress();
             //给关闭通道进行监听
             channelFuture.channel().closeFuture().sync();
         }finally {

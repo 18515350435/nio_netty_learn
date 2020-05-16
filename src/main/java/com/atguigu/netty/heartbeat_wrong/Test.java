@@ -1,4 +1,4 @@
-package com.atguigu.netty.heartbeat;
+package com.atguigu.netty.heartbeat_wrong;
 
 public class Test {
     public static void main(String[] args) throws Exception {
