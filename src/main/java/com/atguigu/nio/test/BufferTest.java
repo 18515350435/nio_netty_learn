@@ -1,6 +1,11 @@
 package com.atguigu.nio.test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 
 /**
  * @Author Badribbit
@@ -14,7 +19,14 @@ public class BufferTest {
      * ×Ü½á£¬byteBufferÕæÅ£±Æ
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        File file = new File("D://data.txt");
+        long len = file.length();
+        byte[] ds = new byte[(int) len];
+        MappedByteBuffer mappedByteBuffer = new RandomAccessFile(file, "r")
+                .getChannel()
+                .map(FileChannel.MapMode.READ_ONLY, 0, len);
+
         ByteBuffer byteBuffer=ByteBuffer.allocate(64);
         byteBuffer.putInt(123);
         byteBuffer.putLong(123213123L);
