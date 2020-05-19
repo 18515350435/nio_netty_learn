@@ -5,24 +5,59 @@ import java.nio.ByteBuffer;
 public class NIOByteBufferPutGet {
     public static void main(String[] args) {
 
-        //åˆ›å»ºä¸€ä¸ªBuffer
-        ByteBuffer buffer = ByteBuffer.allocate(64);
-
-        //ç±»å‹åŒ–æ–¹å¼æ”¾å…¥æ•°æ®
-        buffer.putInt(100);
-        buffer.putLong(9);
-        buffer.putChar('å°š');
-        buffer.putShort((short) 4);
-
-        //å–å‡º
-        buffer.flip();
-
-        System.out.println();
+        //´´½¨Ò»¸öBuffer
+        ByteBuffer buffer = ByteBuffer.allocateDirect(64);
 
         System.out.println(buffer.getInt());
-        System.out.println(buffer.getLong());
-        System.out.println(buffer.getChar());
-        System.out.println(buffer.getShort());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        //ÀàĞÍ»¯·½Ê½·ÅÈëÊı¾İ
+        buffer.putInt(100);
+        buffer.putInt(101);
+        buffer.putInt(102);
+        buffer.putInt(103);
+
+        //È¡³ö
+        buffer.flip();
+        buffer.clear();
+//        buffer.putInt(200);
+//        buffer.putInt(201);
+//        buffer.putInt(202);
+//        buffer.putInt(203);
+
+//        buffer.flip();
+//        buffer.mark();
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+        System.out.println(buffer.getInt());
+//
+//        buffer.putInt(104);
+//        buffer.putInt(105);
+//        buffer.putInt(105);
+//        buffer.putInt(105);
+//        buffer.putInt(105);
+//        buffer.putInt(105);
+//        buffer.putInt(105);
+//        buffer.flip();
+//        System.out.println();
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+//        System.out.println(buffer.getInt());
+
 
 
 
