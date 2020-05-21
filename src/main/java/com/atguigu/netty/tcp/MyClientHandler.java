@@ -12,6 +12,9 @@ public class MyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     private int count;
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        ctx.channel().read();
+        ctx.read()
+                ctx.wait();
         //使用客户端发送10条数据 hello,server 编号
         for(int i= 0; i< 10; ++i) {
             ByteBuf buffer = Unpooled.copiedBuffer("hello,server " + i, Charset.forName("utf-8"));

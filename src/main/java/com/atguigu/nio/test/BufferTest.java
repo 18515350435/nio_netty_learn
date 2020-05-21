@@ -6,6 +6,8 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @Author Badribbit
@@ -20,6 +22,9 @@ public class BufferTest {
      * @param args
      */
     public static void main(String[] args) throws Exception {
+        Thread t = new Thread();
+
+
         File file = new File("D://data.txt");
         long len = file.length();
         byte[] ds = new byte[(int) len];
